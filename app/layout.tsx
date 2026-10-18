@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { VisitorPopup } from "@/components/visitor-popup";
 import "./globals.css";
 
 const themeInitScript = `
@@ -34,7 +35,10 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <VisitorPopup />
+      </body>
     </html>
   );
 }
